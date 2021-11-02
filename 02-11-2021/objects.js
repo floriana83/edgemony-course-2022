@@ -23,13 +23,3 @@ console.log('Singolo array annidata:', movie.cast[0]);
 // movie.director = "Shaun Levy";
 
 console.log('Oggetto:', movie);
-
-// object vs JSON
-// JavaScript Object Notation
-
-/*
-1. Idea
-2. Disegno dei dati
-3. Grafica
-4. Codice
-*/
