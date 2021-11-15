@@ -21,7 +21,7 @@ const Add = () => {
 
       <div class="row">
         <label for="expired">expired:</label>
-        <input type="number" min="1900" value="2021" id="expired" name="expired" />
+        <input type="date" min="2021-11-15" value="2021-11-15" id="expired" name="expired" />
       </div>
 
 
@@ -36,8 +36,8 @@ const Add = () => {
 
     const toDo = {
       title: event.target.title.value,
-      poster: event.target.completed.value,
-      expired: parseInt(event.target.expired.value),
+      completed: event.target.completed.checked,
+      expired: event.target.expired.value,
  
     };
 

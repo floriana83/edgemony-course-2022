@@ -2,8 +2,8 @@ import { render } from "./utils.js";
 
 const List = (data) => {
   const elements = data
-    .map((item) => `<li><li><label><input 
-    type="checkbox" ${item.completed ? "checked" : ""}  /> ${item.title} ${item.expires}</label></li>`)
+    .map((item) => `<div><li><input 
+    type="checkbox" ${item.completed ? "checked" : ""}  /> ${item.title} ${item.expired} </li></div>`)
     .join(""); 
  
 
