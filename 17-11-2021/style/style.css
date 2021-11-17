@@ -125,7 +125,7 @@ li:before {
 }
 
 #container,
-article {
+article{
 
   color: white;
   font-weight: bold;
@@ -140,7 +140,10 @@ article {
 
 }
 
+p {
+  font-size: 20px;
 
+}
 
 ul,
 form {
