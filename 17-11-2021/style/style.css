@@ -1,0 +1,249 @@
+body {
+  font-family: sans-serif;
+  background-image: url("./cinemaSfondo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+main,
+header,
+footer {
+  width: 80%;
+  margin: 30px auto;
+}
+
+.fas,
+#school {
+  color: aqua;
+}
+
+
+header {
+  color: white;
+}
+
+main {
+  width: 40%;
+  margin: auto;
+  background: rgba(70, 32, 32, 0.63);
+  padding: 50px 20px;
+  border-radius: 10px;
+  color: white;
+  display: grid;
+
+}
+
+hr {
+  border: 0;
+  background-color: #ccc;
+  height: 1px;
+  margin: 20px 0;
+}
+
+
+
+#add {
+
+  padding: 10px;
+  background-color: rgb(121, 13, 9);
+  border: 1px solid rgb(146, 46, 42);
+  font-size: 16px;
+  transition: all 0.4s ease;
+  border-radius: 10px;
+}
+
+#add:hover {
+  cursor: pointer;
+  background-color: #ac0e0e;
+  color: white;
+  border-color: #00ced1;
+}
+
+.Btn {
+  border: 1px solid rgb(146, 46, 42);
+  border-radius: 10px;
+  outline: none;
+  padding: 11px 10px;
+  background: rgb(121, 13, 9);
+  color: whitesmoke;
+  font-size: 16px;
+  box-shadow: 0 7px 5px black;
+}
+
+#create label {
+  display: block;
+  width: 300px;
+  font-size: 14px;
+
+}
+
+#create input,
+#create textarea {
+  display: block;
+  width: 100%;
+  padding: 4px;
+  font-size: 14px;
+}
+
+#create input {
+  outline: none;
+  border: 2px solid #999;
+  transition: all 0.6s ease;
+}
+
+#create input:focus {
+  border: 2px solid #ddcd3b;
+  box-shadow: 0px 0px 10px #ddcd3b;
+}
+
+#create textarea {
+  resize: vertical;
+}
+
+#create .row {
+  margin: 10px 0;
+}
+
+ul li a {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #ca9150;
+}
+
+a:visited {
+  color: rgba(250, 175, 76, 0.993);
+}
+
+li {
+  list-style: none;
+
+}
+
+li:before {
+  content: '📽️';
+
+}
+
+#container,
+article {
+
+  color: white;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+#back {
+  color: #ca9150;
+
+}
+
+
+
+ul,
+form {
+  padding-bottom: 20px;
+}
+
+.edit {
+  border: 0;
+  background-color: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+
+.delete {
+  border: 0;
+
+  background-color: transparent;
+
+  transition: all 0.4s ease;
+}
+
+.delete:hover {
+  cursor: pointer;
+  transform: rotate(360deg) scale(2);
+  background-color: transparent;
+}
+
+img {
+  width: 80%;
+  height: auto;
+}
+
+
+/* Box di avviso errori */
+.alert {
+  background-color: #b22222;
+  color: #fff;
+  top: -500px;
+  width: 400px;
+  /* per centrare orizzontalmente un elemento fixed/absolute */
+  left: 50%;
+  /* per centrare orizzontalmente un elemento fixed/absolute */
+  margin-left: -200px;
+  /* per centrare orizzontalmente un elemento fixed/absolute */
+  position: fixed;
+  z-index: 99;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  transition: all 0.5s ease;
+}
+
+.alert.show {
+  top: 100px;
+}
+
+.alert p {
+  padding: 20px;
+}
+
+/* Placeholder per caricamento */
+.loading {
+  color: #aaa;
+  padding: 15px;
+  border: 1px dashed #aaa;
+
+  animation-name: pulse;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+footer {
+  width: 100%;
+
+  margin: auto;
+  background: rgba(0, 0, 0, 0.63);
+
+
+  color: rgb(20, 85, 172);
+  padding: 30px 0px;
+
+  font-size: 14px;
+
+  margin-top: 20px;
+  text-align: center;
+  color: wheat;
+}
+footer a{
+  color: #fff;
+}
+
+footer a:hover{
+  color: rgb(65, 214, 225);
+  text-decoration: none;
+}
+
+/* Animazione */
+@keyframes pulse {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0.4;
+  }
+}

@@ -6,7 +6,7 @@ const List = (data) => {
       (item) => `<li>
         <a href="#view-${item.id}">${item.title}</a> - ${item.year}
         <a class="edit" href="#edit-${item.id}">✏️</a>
-        <button class="delete" id="${item.id}">x</button>
+        <button class="delete" id="${item.id}">🗑️</button>
       </li>`
     )
     .join("");

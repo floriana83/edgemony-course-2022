@@ -37,7 +37,7 @@ const Edit = (id = 0) => {
               <textarea id="description" name="description">${movie.description}</textarea>
             </div>
       
-            <button>Aggiorna scheda</button>
+            <button class="Btn">Aggiorna scheda</button>
           </form>
       
           <a href="#" id="back">Torna alla home</a>
