@@ -1,5 +1,5 @@
 * {
-   background-color: lightslategray;
+    background-color: lightslategray;
 
 }
 
@@ -9,136 +9,108 @@ body {
     flex-direction: column;
     align-items: center;
 
-
 }
 
 #container {
-    width: 700px;
+    width: 750px;
     height: 400px;
     position: relative;
-    padding-bottom: 25px;
+    padding-bottom: 50px;
 }
 
-#sfondo{
+#sfondo {
     border: solid 10px rgb(14, 1, 1);
-    width: 700px;
+    width: 750px;
     height: 400px;
-    position: absolute;
+    position: relative;
     background-image: url(./sfondo.jpg);
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
+
 }
 
-.girl{
+/* //  SPRITE */
+
+.girl {
     position: absolute;
-    top: 50%;
-    left: 70%;
-    transform: translate(-50%, -50%);
-    width: 150px;
-    height: 600px;
-    background: url(WalkingGirl.png);
+    width: calc(250px/4);
+    height: 86px;
+    background-image: url(./doraup.png);
+    background-color: transparent;
+    background-position: top right;
+
+
 }
 
-.girl1{
-    position: absolute;
-    
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: calc(600px/4);
-    height: 600px;
-    background: url(WalkingGirl.png);
-    animation: animate 1s steps(4);
-    transition: all 1s;
+.down {
+    transition: top 1s ease, left 1s ease;
+    background-position: top left;
+    animation-name: walikng;
+    animation-duration: 2s;
+    animation-timing-function: steps(4);
+    animation-iteration-count: infinite;
+
+
 }
-.girl4{
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: calc(600px/4);
-    height: 600px;
-    background: url(WalkingGirl.png);
-    animation: animate 1s steps(4);
-    transition: all 1s;
-}
-@keyframes animate
-{
-    from 
-    {
-        background-position: 0;
+
+@keyframes walikng {
+    from {
+        background-position-x: 0
     }
 
-    to 
-    {
-        background-position: -600px;
-    }
-}
-
-@keyframes animate
-{
-    from 
-    {
-        background-position: 0;
-    }
-
-    to 
-    {
-        background-position: -600px;
-    }
-}
-.girl2{
-    position: absolute;
-    top: 70%;
-    left: 40%;
-    transform: translate(-50%, -50%);
-    width: calc(600px/4);
-    height: 600px;
-    background: url(WalkingGirlSx.png);
-    animation: animate 1s steps(4);
-    transition: all 1s;
-
-}
-
-@keyframes animate
-{
-    from 
-    {
-        background-position: 0;
-    }
-
-    to 
-    {
-        background-position: -600px;
-    }
-}
-
-.girl3{
-    position: absolute;
-    top: 70%;
-    left: 60%;
-    transform: translate(-50%, -50%);
-    width: calc(600px/4);
-    height: 600px;
-    background: url(WalkingGirlDx.png);
-    animation: animate 1s steps(4);
-    transition: all 1s;
-}
-@keyframes animate
-{
-    from 
-    {
-        background-position: 0;
-    }
-
-    to 
-    {
-        background-position: -600px;
+    to {
+        background-position-x: -100px;
     }
 }
 
 
-/* /// Bottoni */
+.left {
+    background-image: url(./dorasx.png);
+    transition: top 1s ease, left 1s ease;
+    background-position: top left;
+    animation-name: sinistra;
+    animation-duration: 2s;
+    animation-timing-function: steps(4);
+    animation-iteration-count: infinite;
+
+
+}
+
+@keyframes sinistra {
+    from {
+        background-position-x: 0
+    }
+
+    to {
+        background-position-x: -200px;
+    }
+}
+
+
+.right {
+    background-image: url(./doradx.png);
+    transition: top 1s ease, left 1s ease;
+    background-position: top left;
+    animation-name: destra;
+    animation-duration: 2s;
+    animation-timing-function: steps(4);
+    animation-iteration-count: infinite;
+
+
+}
+
+@keyframes destra {
+    from {
+        background-position-x: 0
+    }
+
+    to {
+        background-position-x: -200px;
+    }
+}
+
+
+/* /// BOTTONI */
 
 .Btn {
     display: grid;
@@ -150,53 +122,80 @@ body {
     gap: 1px 1px;
     grid-auto-flow: row;
     grid-template-areas:
-      ". w ."
-      "a s d";
+        ". w ."
+        "a s d";
     width: 200px;
     height: 150px;
 
-  
-  }
-  
-  .w { 
-      grid-area: w;
-      background-color: rgb(9, 146, 146) ;
-      text-align: center; 
-      padding-top: 40%;
-      box-shadow: 8px 10px 10px rgba(75, 74, 82, 0.267);
-      border-radius: 20px;
-      
 
-    }
-  
-  .a { 
-      grid-area: a; 
-      background-color: rgb(20, 172, 96) ; 
-      text-align: center; 
-      padding-top: 40%;
-      box-shadow: 8px 10px 10px rgba(75, 74, 82, 0.267);
-      border-radius: 20px;
+}
 
-    }
-  
-  .s { 
-      grid-area: s;       
-      background-color: rgb(206, 82, 82) ; 
-      text-align: center; 
-      padding-top: 40%;
-      box-shadow: 8px 10px 10px rgba(75, 74, 82, 0.267);
-      border-radius: 20px;
+.w {
+    grid-area: w;
+    background-color: rgb(9, 146, 146);
+    text-align: center;
+    padding-top: 40%;
+    box-shadow: 8px 10px 10px rgba(75, 74, 82, 0.267);
+    border-radius: 20px;
+    border: 2px solid rgb(5, 112, 112);
+    font-weight: bolder;
+    cursor: pointer;
 
-    }
-  
-  .d { 
-      grid-area: d;       
-      background-color: rgb(80, 80, 238) ; 
-      text-align: center; 
-      padding-top: 40%;
-      box-shadow: 8px 10px 10px rgba(75, 74, 82, 0.267);
-      border-radius: 20px;
+}
 
-    }
-  
+.a {
+    grid-area: a;
+    background-color: rgb(20, 172, 96);
+    text-align: center;
+    padding-top: 40%;
+    box-shadow: 8px 10px 10px rgba(75, 74, 82, 0.267);
+    border-radius: 20px;
+    border: 2px solid rgb(17, 129, 73);
+    font-weight: bolder;
+    cursor: pointer;
+}
 
+.s {
+    grid-area: s;
+    background-color: rgb(206, 82, 82);
+    text-align: center;
+    padding-top: 40%;
+    box-shadow: 8px 10px 10px rgba(75, 74, 82, 0.267);
+    border-radius: 20px;
+    border: 2px solid rgb(156, 51, 51);
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.d {
+    grid-area: d;
+    background-color: rgb(80, 80, 238);
+    text-align: center;
+    padding-top: 40%;
+    box-shadow: 8px 10px 10px rgba(75, 74, 82, 0.267);
+    border-radius: 20px;
+    border: 2px solid rgb(60, 60, 199);
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+/* // FOOTER */
+
+hr {
+
+    border: 1px;
+    width: 700px;
+    background: whitesmoke;
+    height: 1px;
+
+}
+
+footer {
+
+    padding-top: 50px;
+    width: 700px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+
+}
