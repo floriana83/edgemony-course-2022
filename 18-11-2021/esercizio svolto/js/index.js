@@ -1,8 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const btnJump = document.querySelector(".w");
+    const btnJump = document.querySelector(".j");
     const btnDw = document.querySelector(".s");
     const btnSx = document.querySelector(".a");
     const btnDx = document.querySelector(".d");
+    const btnUp = document.querySelector(".w");
 
 
     const dora = document.querySelector(".girl");
@@ -13,6 +14,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     dora.style.left = `${moveleft}px`;
     dora.style.top = `${movetop}px`;
+
+
+    btnUp.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        if (movetop > 270) {
+            dora.classList.toggle('up');
+            movetop = movetop - 100;
+            dora.style.top = `${movetop}px`;
+            setTimeout(() => dora.classList.toggle('up'), 500);
+        }
+
+    });
 
     btnJump.addEventListener('click', (e) => {
         e.preventDefault();
@@ -30,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
             dora.classList.toggle('down');
             movetop = movetop + 100;
             dora.style.top = `${movetop}px`;
-            setTimeout(() => dora.classList.toggle('down'), 400);
+            setTimeout(() => dora.classList.toggle('down'), 500);
         }
     });
 
@@ -41,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
             dora.classList.toggle('left');
             moveleft = moveleft - 100;
             dora.style.left = `${moveleft}px`;
-            setTimeout(() => dora.classList.toggle('left'), 400);
+            setTimeout(() => dora.classList.toggle('left'), 500);
         }
     });
 
@@ -51,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
             dora.classList.toggle('right');
             moveleft = moveleft + 100;
             dora.style.left = `${moveleft}px`;
-            setTimeout(() => dora.classList.toggle('right'), 400);
+            setTimeout(() => dora.classList.toggle('right'), 500);
         }
     });
 

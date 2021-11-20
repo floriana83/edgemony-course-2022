@@ -42,6 +42,30 @@ body {
 
 }
 
+
+
+.up {
+    transition: top 1s ease, left 1s ease;
+    background-position: top left;
+    animation-name: moonwalikng;
+    animation-duration: 10s;
+    animation-timing-function: steps(4);
+    animation-iteration-count: infinite;
+
+
+}
+
+@keyframes moonwalikng {
+    from {
+        background-position-x: 0
+    }
+
+    to {
+        background-position-x: -100px;
+    }
+}
+
+
 .down {
     transition: top 1s ease, left 1s ease;
     background-position: top left;
@@ -116,16 +140,17 @@ body {
     display: grid;
     position: relative;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-auto-columns: 1fr;
     grid-auto-rows: 1fr;
     gap: 1px 1px;
     grid-auto-flow: row;
     grid-template-areas:
         ". w ."
-        "a s d";
+        "a j d"
+        ". s .";
     width: 200px;
-    height: 150px;
+    height: 190px;
 
 
 }
@@ -134,10 +159,23 @@ body {
     grid-area: w;
     background-color: rgb(9, 146, 146);
     text-align: center;
-    padding-top: 40%;
+    padding-top: 30%;
     box-shadow: 8px 10px 10px rgba(75, 74, 82, 0.267);
     border-radius: 20px;
     border: 2px solid rgb(5, 112, 112);
+    font-weight: bolder;
+    cursor: pointer;
+
+}
+
+.j {
+    grid-area: j;
+    background-color: rgb(206, 82, 82);
+    text-align: center;
+    padding-top: 30%;
+    box-shadow: 8px 10px 10px rgba(75, 74, 82, 0.267);
+    border-radius: 20px;
+    border: 2px solid rgb(156, 51, 51);
     font-weight: bolder;
     cursor: pointer;
 
@@ -147,7 +185,7 @@ body {
     grid-area: a;
     background-color: rgb(20, 172, 96);
     text-align: center;
-    padding-top: 40%;
+    padding-top: 30%;
     box-shadow: 8px 10px 10px rgba(75, 74, 82, 0.267);
     border-radius: 20px;
     border: 2px solid rgb(17, 129, 73);
@@ -157,12 +195,12 @@ body {
 
 .s {
     grid-area: s;
-    background-color: rgb(206, 82, 82);
+    background-color: rgb(32, 74, 172);
     text-align: center;
-    padding-top: 40%;
+    padding-top: 30%;
     box-shadow: 8px 10px 10px rgba(75, 74, 82, 0.267);
     border-radius: 20px;
-    border: 2px solid rgb(156, 51, 51);
+    border: 2px solid rgb(39, 18, 154);
     font-weight: bolder;
     cursor: pointer;
 }
@@ -171,7 +209,7 @@ body {
     grid-area: d;
     background-color: rgb(80, 80, 238);
     text-align: center;
-    padding-top: 40%;
+    padding-top: 30%;
     box-shadow: 8px 10px 10px rgba(75, 74, 82, 0.267);
     border-radius: 20px;
     border: 2px solid rgb(60, 60, 199);
