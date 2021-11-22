@@ -1,0 +1,35 @@
+body {
+  font-family: sans;
+}
+
+/* Regola specifica per progetto */
+#myElement {
+  border: none;
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #999;
+}
+
+/* Classi atomiche */
+.buttonBaseStyle {
+  border: none;
+  font-size: 20px;
+}
+
+.spacing {
+  padding: 10px 20px;
+}
+
+.typo  {
+  background-color: #fff;
+  color: #999;
+}
+
+.transition {
+  transition: all 0.4s ease;
+}
+
+/* <button class="myElement"></button> */
+/* <button class="buttonBaseStyle spacing typo"></button> */
+/* <p class="typo"></p> */
