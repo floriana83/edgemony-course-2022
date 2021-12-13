@@ -1,0 +1,47 @@
+button {
+  font-size: 20px;
+}
+
+.container {
+  margin-top: 30px;
+  border: 1px solid #000;
+  position: relative;
+  height: 600px;
+  width: 100%;
+}
+
+.hero {
+  position: absolute;
+  width: 130px;
+  height: 200px;
+  top: 200px;
+  left: 300px;
+  transition: top 2s ease, left 2s ease;
+  background-image: url(sprite.png);
+  background-position: top left;
+
+  /* animation-name: walking;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate; */
+}
+
+.hero.walk {
+  background-position: top right;
+}
+
+.hero.faceDX {
+  background-position: bottom left;
+}
+.hero.walkDX {
+  background-position: bottom right;
+}
+
+@keyframes walking {
+  from {
+    background-position: top left;
+  }
+  to {
+    background-position: top right;
+  }
+}
